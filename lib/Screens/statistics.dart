@@ -16,8 +16,8 @@ ValueNotifier kj = ValueNotifier(0);
 class _StatisticsState extends State<Statistics> {
   List day = ['Day', 'Week', 'Month', 'Year'];
   List f = [today(), week(), month(), year()];
-  List<Add_data> a = [];
-  int index_color = 0;
+  List<AddData> a = [];
+  int indexColor = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +61,7 @@ class _StatisticsState extends State<Statistics> {
                         return GestureDetector(
                           onTap: () {
                             setState(() {
-                              index_color = index;
+                              indexColor = index;
                               kj.value = index;
                             });
                           },
@@ -70,7 +70,7 @@ class _StatisticsState extends State<Statistics> {
                             width: 80,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: index_color == index
+                              color: indexColor == index
                                   ? const Color.fromARGB(255, 47, 125, 121)
                                   : Colors.white,
                             ),
@@ -78,7 +78,7 @@ class _StatisticsState extends State<Statistics> {
                             child: Text(
                               day[index],
                               style: TextStyle(
-                                color: index_color == index
+                                color: indexColor == index
                                     ? Colors.white
                                     : Colors.black,
                                 fontSize: 16,
@@ -94,7 +94,7 @@ class _StatisticsState extends State<Statistics> {
               ),
               const SizedBox(height: 20),
               Chart(
-                indexx: index_color,
+                indexx: indexColor,
               ),
               const SizedBox(height: 20),
               const Padding(
@@ -146,7 +146,7 @@ class _StatisticsState extends State<Statistics> {
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 19,
-                  color: a[index].IN == 'Income' ? Colors.green : Colors.red,
+                  color: a[index].flux == 'Income' ? Colors.green : Colors.red,
                 ),
               ),
             );

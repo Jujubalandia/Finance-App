@@ -1,13 +1,13 @@
-import 'package:managment/data/1.dart';
+import 'package:managment/data/one.dart';
 
-List<money> geter_top() {
-  money snapFood = money();
+List<Money> geterTop() {
+  Money snapFood = Money();
   snapFood.time = 'jan 30,2022';
   snapFood.image = 'mac.jpg';
   snapFood.buy = true;
   snapFood.fee = '- \$ 100';
   snapFood.name = 'macdonald';
-  money snap = money();
+  Money snap = Money();
   snap.image = 'cre.png';
   snap.time = 'today';
   snap.buy = true;

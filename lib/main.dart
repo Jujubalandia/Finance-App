@@ -7,7 +7,7 @@ import 'data/model/add_date.dart';
 void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(AdddataAdapter());
-  await Hive.openBox<Add_data>('data');
+  await Hive.openBox<AddData>('data');
   runApp(const MyApp());
 }
 
