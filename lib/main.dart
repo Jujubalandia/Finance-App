@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:managment/Screens/home.dart';
-import 'package:managment/Screens/statistics.dart';
 import 'package:managment/widgets/bottomnavigationbar.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -14,11 +12,11 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Bottom(),
     );
